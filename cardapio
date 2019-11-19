@@ -25,6 +25,8 @@ INSERT INTO Sabores(nome, descricao) (Lombo,para quem gosta de carne de porco, e
 
 INSERT INTO Sabores(nome, descricao) (Tropical,os ingredientes para rechear a pizza tropical são muçarela, camarão, bacon e abacaxi. Em uma única pizza é possível sentir o sabor salgado, doce e azedo.);
 
+INSERT INTO Sabores(nome, descricao) (Frango com catupiry,A mistura de proteína e cremosidade que deu muito certo.);
+
 INSERT INTO Sabores(nome, descricao) (Frango com linguiça,o frango usado para o recheio dessa pizza é desfiado, além dele e da linguiça, a sugestão é acrescentar pimentão vermelho, queijo ralado, orégano e pimenta.);
 
 INSERT INTO Sabores(nome, descricao) (Filé e 4 queijos,para preparar o recheio dessa pizza o filé deve ser cortado em tiras e selado. Os queijos escolhidos foram pecorino, petit cantal, provolone e grana padano, mas você pode substituir por queijos de sua preferência, como gorgonzola e muçarela, por exemplo.);
