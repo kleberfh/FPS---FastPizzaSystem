@@ -3,3 +3,12 @@ https://colorlib.com/wp/template/luigis/
 https://w3layouts.com/shoppy-e-commerce-admin-panel-responsive-web-template/
 https://cssauthor.com/bootstrap-admin-templates/ -> NGX Admin
 https://github.com/akveo/ngx-admin/
+https://github.com/puikinsh/CoolAdmin
+https://templatemag.com/dashio-bootstrap-admin-template/
+https://github.com/keen/dashboards
+https://github.com/Urbanui/MajesticAdmin-Free-Bootstrap-Admin-Template
+https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/
+
+-> https://github.com/TemplateWatch/Kapella-Free-Bootstrap-Admin-Template
+
+https://www.bootstrapdash.com/free-back-end-simple-admin-panel-templates/
