@@ -35,11 +35,11 @@ Class UsuarioModel extends CI_Model {
 		}
 	}
 
-	public function verificar_usuario($nome) {
+	public function verificar_usuario($email) {
 
-		$condition = "nome =" . "'" . $nome . "'";
+		$condition = "email =" . "'" . $email . "'";
 		$this->db->select('*');
-		$this->db->from('user_login');
+		$this->db->from('usuarios');
 		$this->db->where($condition);
 		$this->db->limit(1);
 		$query = $this->db->get();

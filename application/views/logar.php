@@ -17,10 +17,10 @@
         <!-- End plugin css for this page -->
         <!-- inject:css -->
         <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/toastify.css">
         <!-- endinject -->
         <link rel="shortcut icon" href="/assets/images/favicon.png" />
     </head>
-<!--	<body>-->
 <!--	--><?php
 //		if (isset($logout_message)) {
 //			echo "<div class='message'>";
@@ -35,29 +35,6 @@
 //			echo "</div>";
 //		}
 //	?>
-<!--	<div id="main">-->
-<!--	<div id="login">-->
-<!--	<h2>Login Form</h2>-->
-<!--	<hr/>-->
-<!--	--><?php //echo form_open('usuario/logar_usuario'); ?>
-<!--	--><?php
-//		echo "<div class='error_msg'>";
-//		if (isset($error_message)) {
-//			echo $error_message;
-//		}
-//		echo validation_errors();
-//		echo "</div>";
-//	?>
-<!--	<label>Nome :</label>-->
-<!--	<input type="text" name="nome" id="nome" placeholder="nome"/><br /><br />-->
-<!--	<label>Senha :</label>-->
-<!--	<input type="password" name="senha" id="senha" placeholder="**********"/><br/><br />-->
-<!--	<input type="submit" value=" Logar " name="submit"/><br />-->
-<!--	<a href="--><?php //echo base_url() ?><!--index.php/usuario/cadastrar">Clique aqui para se cadastrar</a>-->
-<!--	--><?php //echo form_close(); ?>
-<!--	</div>-->
-<!--	</div>-->
-<!--	</body>-->
     <body>
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -77,7 +54,7 @@
                                         <i class="mdi mdi-account-outline text-warning"></i>
                                       </span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg border-left-0" id="InputEmail" name="nome" placeholder="exemplo@email.com">
+                                    <input type="text" name="email" class="form-control form-control-lg border-left-0" id="InputEmail" placeholder="exemplo@email.com">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -116,10 +93,40 @@
     <!-- End plugin js for this page-->
     <!-- inject:js -->
     <script src="/assets/js/template.js"></script>
+    <script src="/assets/js/toastify.js"></script>
     <!-- endinject -->
     <!-- plugin js for this page -->
     <!-- End plugin js for this page -->
     <!-- Custom js for this page-->
+    <script>
+        function mensagemErro(mensagem, bgcolor) {
+            Toastify({
+                text: mensagem,
+                duration: 5000,
+                close: true,
+                backgroundColor: bgcolor,
+                gravity: "top",
+                position: "left"
+            }).showToast();
+        }
+        <?php
+        if (isset($error_message)) {
+            $text = str_ireplace('<p>','',$error_message);
+            $text = str_ireplace('</p>', '', $text);
+            echo 'mensagemErro("'.$text.'", "red");';
+        }
+        ?>
+        <?php
+        $errors = explode(PHP_EOL, validation_errors());
+        foreach ($errors as $error) {
+            if (!empty($error)) {
+                $text = str_ireplace('<p>','',$error);
+                $text = str_ireplace('</p>', '', $text);
+                echo 'mensagemErro("'.$text.'", "orange");';
+            }
+        }
+        ?>
+     </script>
     <!-- End custom js for this page-->
     </body>
 </html>

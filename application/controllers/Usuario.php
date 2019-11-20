@@ -47,12 +47,14 @@ class Usuario extends CI_Controller {
 
 	public function logar_usuario() {
 
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('senha', 'Senha', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('email', 'Email', 'required',
+                                            array( 'required' => 'Digite seu %s'));
+		$this->form_validation->set_rules('senha', 'Senha', 'required',
+                                            array('required' => 'Digite sua %s'));
 
 		if ($this->form_validation->run() == FALSE) {
 			if(isset($this->session->userdata['logado'])){
-				$this->load->view('home');
+                redirect('home');
 			}else{
 				$this->load->view('logar');
 			}
@@ -64,16 +66,16 @@ class Usuario extends CI_Controller {
 			$result = $this->UsuarioModel->logar($data);
 			if ($result == TRUE) {
 
-				$username = $this->input->post('nome');
-				$result = $this->UsuarioModel->verificar_usuario($username);
-				if ($result != false) {
+				$email = $this->input->post('email');
+				$result = $this->UsuarioModel->verificar_usuario($email);
+				if ($result) {
 					$session_data = array(
 						'nome' => $result[0]->nome,
 						'email' => $result[0]->email,
 					);
 
 					$this->session->set_userdata('logado', $session_data);
-					$this->load->view('home');
+					redirect('home');
 				}
 			} else {
 				$data = array(
@@ -84,7 +86,7 @@ class Usuario extends CI_Controller {
 		}
 	}
 
-	public function logout() {
+	public function deslogar() {
 
 		$sess_array = array(
 			'username' => ''
