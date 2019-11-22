@@ -92,7 +92,7 @@ class Usuario extends CI_Controller {
 			'username' => ''
 		);
 		$this->session->unset_userdata('logado', $sess_array);
-		$data['message_display'] = 'Usuário desconectado.';
+		$data['message_display'] = 'Usuário desconectado com sucesso';
 		$this->load->view('logar', $data);
 	}
 

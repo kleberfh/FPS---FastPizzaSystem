@@ -21,20 +21,6 @@
         <!-- endinject -->
         <link rel="shortcut icon" href="/assets/images/favicon.png" />
     </head>
-<!--	--><?php
-//		if (isset($logout_message)) {
-//			echo "<div class='message'>";
-//			echo $logout_message;
-//			echo "</div>";
-//		}
-//	?>
-<!--	--><?php
-//		if (isset($message_display)) {
-//			echo "<div class='message'>";
-//			echo $message_display;
-//			echo "</div>";
-//		}
-//	?>
     <body>
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -124,6 +110,13 @@
                 $text = str_ireplace('</p>', '', $text);
                 echo 'mensagemErro("'.$text.'", "orange");';
             }
+        }
+        ?>
+        <?php
+        if (isset($message_display)) {
+            $text = str_ireplace('<p>','',$message_display);
+            $text = str_ireplace('</p>', '', $text);
+            echo 'mensagemErro("'.$text.'", "green");';
         }
         ?>
      </script>
