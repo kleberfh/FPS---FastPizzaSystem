@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="447bb677-d6ed-49fb-9401-e83ad9ca9a2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Clientes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Pedidos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Produtos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/ClientesModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/PedidosModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/ProdutosModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/SaboresModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/clientes/listar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/clientes/novo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/pedidos/listar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/pedidos/novo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/produtos/listar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/produtos/novo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/logar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/logar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cardapio" beforeDir="false" afterPath="$PROJECT_DIR$/cardapio" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +72,7 @@
       <updated>1574169509983</updated>
       <workItem from="1574169511228" duration="28705000" />
       <workItem from="1574445337556" duration="67000" />
-      <workItem from="1574452054146" duration="11294000" />
+      <workItem from="1574452054146" duration="12209000" />
     </task>
     <servers />
   </component>
